@@ -5,7 +5,7 @@ import {
   updateProduct,
   getProductById,
   uploadProductThumbnail,
-} from "../features/apiCalls";
+} from "../../features/apiCall";
 
 const BASE_API_URL = "http://localhost:8081";
 const AddProduct = () => {
