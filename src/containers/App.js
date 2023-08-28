@@ -1,8 +1,17 @@
+import Products from "./pages/Products";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddProduct from "./pages/AddProduct";
+
 function App() {
   return (
-    <div>
-     <h1>Hello World!</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/addProduct" element={<AddProduct />} />
+        <Route path="/" element={<Products/>} />
+        <Route path="/updateProduct/:id" element={<AddProduct />} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
