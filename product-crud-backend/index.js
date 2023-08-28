@@ -4,9 +4,7 @@ const path = require("path");
 const cors = require("cors");
 const multer = require("multer");
 const fs = require("fs");
-require('dotenv').config()
-console.log(process.env)
-console.log(process.env.DB_PASSWORD)
+require('dotenv').config();
 const db = mysql.createConnection({
   host: "localhost",
   user: process.env.DB_USERNAME,
@@ -110,6 +108,6 @@ app.get("/products", (req, res) => {
 });
 
 
-app.listen(8081, () => {
+app.listen(3306, () => {
   console.log("listening");
 });
