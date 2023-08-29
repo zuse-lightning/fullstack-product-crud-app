@@ -55,10 +55,12 @@ export const getProductById = async (id) => {
 
 export const uploadProductThumbnail = async (formData) => {
   try {
+    console.log(formData);
     const res = await axios.post(
       "http://localhost:8081/thumbnailUpload/",
       formData
     );
+    console.log(formData);
     return res.data
       
   } catch (err) {
