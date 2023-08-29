@@ -7,7 +7,7 @@
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node index.js",
     "start:dev": "concurrently \"nodemon --ignore 'product-crud-frontend/*'\" \"npm run product-crud-frontend\"",
-    "client": "cd product-crud-frontend && npm run start",
+    "product-crud-frontend": "cd product-crud-frontend && npm run start",
     "install": "cd product-crud-frontend && npm install",
     "build": "cd product-crud-frontend && npm run build",
     "heroku-postbuild": "npm run build"
