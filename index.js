@@ -107,7 +107,13 @@ app.get("/products", (req, res) => {
     })
 });
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+      return res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  });
+}
 
-app.listen(3306, () => {
+app.listen(8081, () => {
   console.log("listening");
 });

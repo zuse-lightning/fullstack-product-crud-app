@@ -7,7 +7,7 @@ import {
   uploadProductThumbnail,
 } from "../../features/apiCall";
 
-const BASE_API_URL = "http://localhost:3306";
+const BASE_API_URL = "http://localhost:8081";
 const AddProduct = () => {
   const { id } = useParams();
   const [defaultValue, setDeafaultValue] = useState({
